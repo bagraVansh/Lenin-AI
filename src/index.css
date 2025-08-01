@@ -1,0 +1,118 @@
+:root {
+    /* Base Colors */
+    --gh-bg-primary: #0d1117; /* Main background */
+    --gh-bg-secondary: #161b22; /* Secondary background, cards, etc. */
+    --gh-bg-tertiary: #21262d; /* Tertiary background, hover states */
+
+    /* Text Colors */
+    --gh-text-primary: #c9d1d9; /* Primary text */
+    --gh-text-secondary: #8b949e; /* Secondary text, subtitles, captions */
+    --gh-text-tertiary: #6e7681; /* Tertiary text, placeholders */
+
+    /* Border Colors */
+    --gh-border-primary: #30363d; /* Primary borders */
+    --gh-border-secondary: #21262d; /* Secondary, subtle borders */
+
+    /* Accent Colors */
+    --gh-accent-blue: #58a6ff; /* Primary accent, links, focused elements */
+    --gh-accent-green: #3fb950; /* Success states, confirmed actions */
+    --gh-accent-yellow: #d29922; /* Warnings, attention needed */
+    --gh-accent-orange: #db6d28; /* Moderate warnings */
+    --gh-accent-red: #f85149; /* Errors, destructive actions */
+    --gh-accent-purple: #bc8cff; /* Special highlights, tertiary actions */
+
+    /* Button Colors */
+    --gh-button-bg: #21262d; /* Default button background */
+    --gh-button-text: #c9d1d9; /* Default button text */
+    --gh-button-primary-bg: #238636; /* Primary button background */
+    --gh-button-primary-text: #ffffff; /* Primary button text */
+
+    /* Shadow */
+    --gh-shadow: rgba(0, 0, 0, 0.4); /* Shadow color for elevated elements */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    min-height: 100vh;
+    background-color: var(--gh-bg-primary);
+    color: var(--gh-text-primary);
+    font-family: 'Roboto', sans-serif;
+}
+
+#root {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: var(--gh-bg-primary);
+}
+
+#query:focus {
+    border: 1px solid var(--gh-accent-blue) !important;
+}
+
+input::placeholder {
+    font-size: 20px;
+    color: var(--gh-text-tertiary);
+}
+
+.message:hover {
+    border: 1px solid var(--gh-accent-blue) !important;
+}
+
+.response:hover {
+    border: 1px solid var(--gh-accent-blue) !important;
+}
+
+.chatbox::-webkit-scrollbar {
+    display: none;
+}
+
+.chats:hover{
+    border: 1px solid var(--gh-accent-blue) !important;
+    background-color: var(--gh-bg-tertiary) !important;
+}
+
+@media (max-width: 768px) {
+    .chatbox{
+        width: 100% !important;
+        top: 65px !important;
+        padding: 10px !important;
+    }
+    .message{
+        width: 100% !important;
+        max-width: 100% !important;
+
+    }
+    input{
+        width: 90% !important;
+        max-width: 100% !important;
+        height: 60px !important;
+        font-size: 18px !important;
+    }
+    input::placeholder{
+        font-size: 18px !important;
+    }
+    .sidebar{
+        width: 100% !important;
+    }
+    .chatList{
+        margin: 10px !important;
+        padding: 10px !important;
+    }
+    .chat{
+        padding: 10px !important;
+    }
+    .message-text{
+        font-size: 18px !important;
+    }
+    .button{
+        top: 5px !important;
+        right: 5px !important;
+    }
+}
+
